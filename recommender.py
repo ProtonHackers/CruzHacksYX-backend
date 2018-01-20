@@ -9,14 +9,12 @@ import os
 # Season: Winter, Spring, Summer, Fall
 # Day: Sunday, Monday, Tues, Wed, Thu, Fri, Sat
 
+# tags is list of lists
 id = []
 tags = []
-
 y = []
 
-
 print(len(tags))
-
 # Assign ranks to various clothing articles
 y[0] = 99
 y[1] = 88
