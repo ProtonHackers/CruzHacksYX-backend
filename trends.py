@@ -1,3 +1,4 @@
+# Link: https://github.com/GeneralMills/pytrends#related-queries
 from pytrends.request import TrendReq
 
 pytrends = TrendReq(hl='en-US', tz=360)
