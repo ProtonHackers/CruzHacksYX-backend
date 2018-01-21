@@ -1,9 +1,13 @@
-# Link: https://github.com/GeneralMills/pytrends#related-queries
+import jsonify as jsonify
 from pytrends.request import TrendReq
+import requests
+from bs4 import BeautifulSoup
 
-pytrends = TrendReq(hl='en-US', tz=360)
+pytrend = TrendReq(hl='en-US', tz=360)
 
-kw_list = ['Shirt']
-pytrends.build_payload(kw_list, cat=0, timeframe='today 5-y', geo='', gprop='')
+kw_list = ['dress']
 
-print pytrends.related_queries()
+pytrend.build_payload(kw_list, cat=0, timeframe='today 5-y', geo='', gprop='')
+
+related_queries_dict = pytrend.related_queries()
+print(related_queries_dict[u'dress'][u'rising'].values.T[0])
